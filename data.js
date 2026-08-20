@@ -11,7 +11,7 @@ window.SITE_DATA = {
     email: 'vshso.astgmu@bk.ru',
     address: 'г. Астрахань, ул. Бакинская, 121',
     mapUrl: 'https://yandex.ru/maps/?text=Астрахань%2C%20ул.%20Бакинская%2C%20121',
-    joinEndpoint: 'https://script.google.com/macros/s/AKfycbw_R-WhCxNVOsarYcX1uFoA14gi_oANNONkl1HmqO1jv-ukRYAeQS64Uc4d5LketcEl/exec',
+    joinEndpoint:'https://script.google.com/macros/s/AKfycbyXjVcydrcU9yDU1cY8vJoR4AFxfd1KjC67-q060VdMb0Uvi0zGjUsbNodyYmoOGToKHQ/exec',
     videoUrl: '',
     heroImage: 'assets/hq-hero.jpg'
   },
