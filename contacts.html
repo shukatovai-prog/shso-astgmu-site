@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Контакты Штаба студенческих отрядов Астраханского ГМУ.">
+<title>Контакты — ШСО Астраханского ГМУ</title>
+<link rel="stylesheet" href="style.css"><link rel="icon" href="assets/favicon.svg">
+<link rel="icon" href="assets/favicon.svg"><link rel="manifest" href="site.webmanifest"></head>
+<body><div id="nav"></div><main>
+<section class="page-hero"><div class="container"><span class="eyebrow">Контакты</span><h1>Связаться со штабом</h1><p>Новости, вопросы по вступлению и официальный адрес Штаба студенческих отрядов Астраханского ГМУ.</p></div></section>
+<section class="section"><div class="container contact-grid contact-grid-final">
+<div class="contact-card"><div class="contact-icon">VK</div><h3>ВКонтакте</h3><p>Новости штаба, мероприятия, фотографии и набор в студенческие медицинские отряды.</p><a id="vk" class="btn btn-primary" target="_blank" rel="noopener">Открыть ВКонтакте</a></div>
+<div class="contact-card"><div class="contact-icon">@</div><h3>Электронная почта</h3><p id="email"></p><a id="mail" class="btn btn-secondary">Написать письмо</a></div>
+<div class="contact-card contact-card-wide"><div class="contact-icon">⌖</div><h3>Астраханский ГМУ</h3><p id="address"></p><a id="map" class="btn btn-secondary" target="_blank" rel="noopener">Открыть на карте</a></div>
+</div></section></main><div id="footer"></div>
+<script src="data.js"></script><script src="app.js"></script>
+<script>
+renderShell('contacts');
+document.getElementById('vk').href=SITE_DATA.site.vkUrl;
+document.getElementById('email').textContent=SITE_DATA.site.email;
+document.getElementById('mail').href='mailto:'+SITE_DATA.site.email;
+document.getElementById('address').textContent=SITE_DATA.site.address;
+document.getElementById('map').href=SITE_DATA.site.mapUrl;
+</script></body></html>

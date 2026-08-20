@@ -1,0 +1,9 @@
+{
+  "name": "Штаб студенческих отрядов Астраханского ГМУ",
+  "short_name": "ШСО АГМУ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f8fb",
+  "theme_color": "#155eef",
+  "icons": []
+}

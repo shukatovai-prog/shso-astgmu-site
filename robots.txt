@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shso-astgmu.vercel.app/sitemap.xml

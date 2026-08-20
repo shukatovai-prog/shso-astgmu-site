@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Анкета на вступление в студенческие медицинские отряды Астраханского ГМУ.">
+<title>Вступить в РСО — ШСО Астраханского ГМУ</title>
+<link rel="stylesheet" href="style.css"><link rel="icon" href="assets/favicon.svg">
+<link rel="icon" href="assets/favicon.svg"><link rel="manifest" href="site.webmanifest"></head>
+<body><div id="nav"></div><main>
+<section class="page-hero"><div class="container"><span class="eyebrow">Вступить в РСО</span><h1>Начни свою историю в СМО</h1><p>Заполни короткую анкету. Комсостав свяжется с тобой, расскажет о четырёх отрядах и поможет сделать первый шаг.</p></div></section>
+<section class="section"><div class="container join-layout">
+<aside class="join-info">
+<span class="eyebrow">Что дальше</span><h2>От анкеты до отряда</h2>
+<div class="join-steps">
+<div><b>01</b><span><strong>Отправь анкету</strong>Заполни основные данные и выбери интересующий отряд.</span></div>
+<div><b>02</b><span><strong>Познакомься с нами</strong>Комсостав свяжется с тобой и расскажет о штабе.</span></div>
+<div><b>03</b><span><strong>Выбери команду</strong>Познакомься с отрядами и найди свой.</span></div>
+<div><b>04</b><span><strong>Стань частью РСО</strong>Участвуй в жизни штаба и готовься к новым возможностям.</span></div>
+</div>
+</aside>
+<form class="join-form" onsubmit="submitJoin(event)">
+<div class="form-grid">
+<div class="field full"><label>ФИО *</label><input name="fio" required placeholder="Иванов Иван Иванович"></div>
+<div class="field"><label>Дата рождения *</label><input name="birthdate" type="date" required></div>
+<div class="field"><label>Курс *</label><select name="course" required><option value="">Выберите</option><option>1 курс</option><option>2 курс</option><option>3 курс</option><option>4 курс</option><option>5 курс</option><option>6 курс</option><option>Ординатура / другое</option></select></div>
+<div class="field"><label>Телефон *</label><input name="phone" required placeholder="+7 ..."></div>
+<div class="field"><label>VK / Telegram *</label><input name="social" required placeholder="Ссылка или @username"></div>
+<div class="field full"><label>Какой отряд интересует?</label><select name="team"><option>Пока не знаю</option><option>Группа крови</option><option>Дофамин</option><option>Аструм</option><option>НейроСпин</option></select></div>
+<div class="field full"><label>Расскажи немного о себе</label><textarea name="comment" placeholder="Почему хочешь вступить, чем увлекаешься, что ждёшь от отряда…"></textarea></div>
+<div class="field full consent"><label><input type="checkbox" required name="consent" value="Да"> <span>Согласен(на) на обработку данных для связи по вопросу вступления.</span></label></div>
+</div>
+<button class="btn btn-primary join-submit" type="submit">Отправить анкету</button>
+<div class="form-status"></div>
+</form>
+</div></section></main><div id="footer"></div>
+<script src="data.js"></script><script src="app.js"></script>
+<script>renderShell('join');prefillJoinTeam();</script>
+</body></html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="О Штабе студенческих отрядов Астраханского ГМУ — студенческие медицинские отряды, команда и комсостав штаба.">
+  <title>О нас — ШСО Астраханского ГМУ</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/favicon.svg"><link rel="manifest" href="site.webmanifest"></head>
+<body>
+<div id="nav"></div>
+<main>
+  <section class="about-hero">
+    <div class="container about-hero-grid">
+      <div>
+        <span class="eyebrow">О нас</span>
+        <h1>Штаб, который объединяет будущих медиков</h1>
+        <p>Штаб студенческих отрядов Астраханского ГМУ — объединение инициативных студентов, которые развиваются в профессии, работают на масштабных проектах, путешествуют и создают сильное студенческое сообщество.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="teams.html">Наши отряды</a>
+          <a class="btn btn-secondary" href="join.html">Вступить в РСО</a>
+        </div>
+      </div>
+      <div class="about-hero-card">
+        <div class="about-hero-kicker">Наше направление</div>
+        <strong>СМО</strong>
+        <h3>Студенческие медицинские отряды</h3>
+        <p>Все четыре отряда штаба работают в медицинском направлении и объединяют студентов Астраханского ГМУ.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container about-stats-wrap">
+    <div id="stats" class="stats"></div>
+  </div>
+
+  <section class="section about-story-section">
+    <div class="container about-story-grid">
+      <div>
+        <span class="eyebrow">Кто мы</span>
+        <h2 class="display-title about-title">Один штаб.<br>Четыре СМО.</h2>
+      </div>
+      <div class="about-story-copy">
+        <p>Мы создаём возможности, развиваем навыки, путешествуем и работаем на масштабных проектах по всей стране. В штабе действуют четыре студенческих медицинских отряда: «Группа крови», «Дофамин», «Аструм» и «НейроСпин».</p>
+        <p>Для бойца штаб — это не только трудовой семестр. Это профессиональный опыт, командная работа, школы и слёты, творческие и спортивные события, новые знакомства и возможность реализовать собственные идеи.</p>
+      </div>
+    </div>
+
+    <div class="container about-functions-grid">
+      <article class="about-function-card">
+        <span>01</span>
+        <h3>Профессиональное развитие</h3>
+        <p>Получаем практический опыт в медицинском направлении ещё во время обучения.</p>
+      </article>
+      <article class="about-function-card">
+        <span>02</span>
+        <h3>Команда</h3>
+        <p>Объединяем студентов разных курсов вокруг общей цели, традиций и проектов.</p>
+      </article>
+      <article class="about-function-card">
+        <span>03</span>
+        <h3>События и проекты</h3>
+        <p>Участвуем в университетских, региональных и всероссийских мероприятиях РСО.</p>
+      </article>
+      <article class="about-function-card">
+        <span>04</span>
+        <h3>Возможности</h3>
+        <p>Развиваем лидерство, творчество, организационные навыки и инициативность.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section about-rso-section">
+    <div class="container about-rso-grid">
+      <div class="about-rso-mark">РСО</div>
+      <div>
+        <span class="eyebrow eyebrow-dark">Большое движение</span>
+        <h2>Российские студенческие отряды</h2>
+        <p>Молодёжная общероссийская общественная организация «Российские студенческие отряды» — крупнейшая молодёжная организация страны. Она занимается временным трудоустройством студентов, гражданско-патриотическим воспитанием, а также развитием творческого и спортивного потенциала.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head about-staff-head">
+        <div>
+          <span class="eyebrow">Команда штаба</span>
+          <h2>Командный состав</h2>
+        </div>
+        <p>Люди, которые координируют работу штаба, помогают отрядам развиваться и объединяют четыре СМО в одну команду.</p>
+      </div>
+      <div id="staff" class="staff-grid staff-grid-four"></div>
+      <div class="about-photo-note">Фотографии сейчас временные. Когда загрузишь реальные портреты комсостава, их можно будет заменить без изменения верстки.</div>
+    </div>
+  </section>
+
+  <section class="section white about-bottom-section">
+    <div class="container">
+      <div class="about-bottom-cta">
+        <div>
+          <span>Хочешь стать частью движения?</span>
+          <h2>Выбери свой отряд и присоединяйся к нам.</h2>
+        </div>
+        <div class="actions">
+          <a class="btn btn-light" href="join.html">Вступить в РСО</a>
+          <a class="btn btn-outline-light" href="teams.html">Смотреть отряды</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  renderShell('about');
+  renderStats('stats', SITE_DATA.stats);
+  renderStaff('staff', SITE_DATA.staff, '');
+</script>
+</body>
+</html>
