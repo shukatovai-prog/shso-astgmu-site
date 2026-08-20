@@ -22,7 +22,19 @@
 <div class="form-grid">
 <div class="field full"><label>ФИО *</label><input name="fio" required placeholder="Иванов Иван Иванович"></div>
 <div class="field"><label>Дата рождения *</label><input name="birthdate" type="date" required></div>
-<div class="field"><label>Курс *</label><select name="course" required><option value="">Выберите</option><option>1 курс</option><option>2 курс</option><option>3 курс</option><option>4 курс</option><option>5 курс</option><option>6 курс</option><option>Ординатура / другое</option></select></div>
+<div class="field"><label>Курс / уровень обучения *</label><select name="course" required onchange="toggleResidencySpecialty(this)"><option value="">Выберите</option><option>1 курс</option><option>2 курс</option><option>3 курс</option><option>4 курс</option><option>5 курс</option><option>6 курс</option><option>Ординатура</option></select></div>
+<div class="field full"><label>Факультет *</label><select name="faculty" required>
+<option value="">Выберите факультет</option>
+<option>Лечебный факультет</option>
+<option>Медико-профилактический факультет</option>
+<option>Педиатрический факультет</option>
+<option>Стоматологический факультет</option>
+<option>Фармацевтический факультет</option>
+<option>Факультет клинической психологии</option>
+<option>Факультет иностранных студентов</option>
+<option>Факультет высшего сестринского образования и среднего профессионального образования</option>
+</select></div>
+<div class="field full" id="residencySpecialtyField" style="display:none"><label>Специальность ординатуры *</label><input name="specialty" placeholder="Например: терапия"></div>
 <div class="field"><label>Телефон *</label><input name="phone" required placeholder="+7 ..."></div>
 <div class="field"><label>VK / Telegram *</label><input name="social" required placeholder="Ссылка или @username"></div>
 <div class="field full"><label>Какой отряд интересует?</label><select name="team"><option>Пока не знаю</option><option>Группа крови</option><option>Дофамин</option><option>Аструм</option><option>НейроСпин</option></select></div>
@@ -34,5 +46,20 @@
 </form>
 </div></section></main><div id="footer"></div>
 <script src="data.js"></script><script src="app.js"></script>
-<script>renderShell('join');prefillJoinTeam();</script>
+<script>
+function toggleResidencySpecialty(select){
+  const field=document.getElementById('residencySpecialtyField');
+  const input=field ? field.querySelector('input[name="specialty"]') : null;
+  const isResidency=select && select.value==='Ординатура';
+  if(field) field.style.display=isResidency?'':'none';
+  if(input){
+    input.required=isResidency;
+    if(!isResidency) input.value='';
+  }
+}
+renderShell('join');
+prefillJoinTeam();
+const courseSelect=document.querySelector('select[name="course"]');
+if(courseSelect) toggleResidencySpecialty(courseSelect);
+</script>
 </body></html>
