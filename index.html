@@ -1,22 +1,176 @@
 <!doctype html>
-<html lang="ru"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="СМО «НейроСпин» — Штаб студенческих отрядов Астраханского ГМУ.">
-<title>НейроСпин — ШСО Астраханского ГМУ</title>
-<link rel="stylesheet" href="../../style.css"><link rel="icon" href="../../assets/favicon.svg"><link rel="manifest" href="../../site.webmanifest">
-</head><body><div id="nav"></div><main>
-<section id="teamHero" class="team-hero team-hero-photo"></section>
-<div class="container"><div id="teamStats" class="stats team-stats"></div></div>
-<section class="section"><div class="container">
-<div class="section-head"><div><span class="eyebrow">Комсостав</span><h2>Команда отряда</h2></div><p>Люди, которые организуют работу, события и жизнь отряда.</p></div>
-<div id="command" class="staff-grid staff-grid-four"></div></div></section>
-<section class="section white"><div class="container">
-<div class="section-head"><div><span class="eyebrow">Наши достижения</span><h2>Чем гордимся</h2></div><p>Победы, проекты и важные события отряда.</p></div>
-<div id="achievements" class="achievement-list"></div></div></section>
-<section class="section"><div class="container">
-<div class="section-head"><div><span class="eyebrow">Фото</span><h2>Жизнь отряда</h2></div><p>Галерея уже подготовлена — останется положить реальные фотографии в папку assets.</p></div>
-<div class="gallery gallery-final">
-<div class="gallery-placeholder">01</div><div class="gallery-placeholder">02</div><div class="gallery-placeholder">03</div><div class="gallery-placeholder">04</div>
-</div></div></section>
-<section class="section white"><div class="container"><div class="section-head"><div><span class="eyebrow">Социальные сети</span><h2>Следить за отрядом</h2></div></div><div id="teamSocial" class="actions"></div></div></section>
-</main><div id="footer"></div><script src="../../data.js"></script><script src="../../app.js"></script><script>renderShell('team');renderTeamPage('neurospin');</script></body></html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Штаб студенческих медицинских отрядов Астраханского ГМУ — четыре отряда, единая команда, профессиональное развитие и насыщенная студенческая жизнь.">
+  <title>Штаб студенческих отрядов Астраханского ГМУ</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/favicon.svg"><link rel="manifest" href="site.webmanifest"></head>
+<body>
+<div id="nav"></div>
+<main>
+  <section class="hero hero-v2">
+    <div class="container hero-grid hero-grid-v2">
+      <div class="hero-copy">
+        <span class="eyebrow">Студенческие медицинские отряды · Астраханский ГМУ</span>
+        <h1>Учимся медицине.<br><span>Растём вместе.</span><br>Создаём историю.</h1>
+        <p id="heroText"></p>
+        <div class="actions">
+          <a class="btn btn-primary" href="join.html">Вступить в РСО</a>
+          <a class="btn btn-secondary" href="teams.html">Выбрать отряд</a>
+        </div>
+        <div class="hero-note">
+          <span class="hero-note-dot"></span>
+          <span>4 студенческих медицинских отряда в одном штабе</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Главная фотография штаба">
+        <div class="hero-photo-placeholder">
+          <div class="hero-photo-badge">Штаб студенческих отрядов</div>
+          <div class="hero-photo-copy">
+            <span>Штаб студенческих отрядов</span>
+            <strong>Астраханского ГМУ</strong>
+          </div>
+        </div>
+        <div class="hero-floating-card">
+          <span>Направление</span>
+          <strong>СМО</strong>
+          <small>студенческие медицинские отряды</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-wrap">
+    <div class="container">
+      <div id="stats" class="stats"></div>
+    </div>
+  </section>
+
+  <section class="section intro-section">
+    <div class="container intro-grid">
+      <div>
+        <span class="eyebrow">Что такое СМО</span>
+        <h2 class="display-title">Медицина начинается не только в аудитории</h2>
+      </div>
+      <div class="intro-copy">
+        <p id="aboutShort"></p>
+        <a class="text-link" href="about.html">Подробнее о штабе →</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="feature-grid feature-grid-v2">
+        <article class="feature feature-v2">
+          <div class="icon">01</div>
+          <h3>Профессиональный опыт</h3>
+          <p>Практика, медицинские проекты и возможность применять знания в реальной командной работе.</p>
+        </article>
+        <article class="feature feature-v2">
+          <div class="icon">02</div>
+          <h3>Команда и окружение</h3>
+          <p>Люди, с которыми вместе учатся, работают, ездят на слёты и создают традиции.</p>
+        </article>
+        <article class="feature feature-v2">
+          <div class="icon">03</div>
+          <h3>Развитие за пределами учёбы</h3>
+          <p>Организация мероприятий, лидерство, творчество, волонтёрство и новые знакомства.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white teams-home-section">
+    <div class="container">
+      <div class="section-head section-head-v2">
+        <div>
+          <span class="eyebrow">Наши отряды</span>
+          <h2>Четыре команды.<br>Один штаб.</h2>
+        </div>
+        <div>
+          <p>Каждый отряд имеет свой характер, традиции, достижения и командный состав. Познакомься со всеми и выбери тот, который ближе тебе.</p>
+          <a class="text-link" href="teams.html">Смотреть все отряды →</a>
+        </div>
+      </div>
+      <div id="teams" class="cards home-team-cards"></div>
+    </div>
+  </section>
+
+  <section class="section values-section">
+    <div class="container values-grid">
+      <div class="values-panel values-main">
+        <span class="eyebrow eyebrow-dark">Больше, чем учёба</span>
+        <h2>Студенческий отряд — это опыт, который остаётся с тобой</h2>
+        <p>СМО объединяют будущих медиков вокруг общего дела. Здесь можно расти профессионально, пробовать себя в новых ролях и находить людей, с которыми хочется двигаться дальше.</p>
+        <a class="btn btn-light" href="join.html">Стать частью движения</a>
+      </div>
+      <div class="values-mini-grid">
+        <div class="value-mini"><strong>Практика</strong><span>Профессиональное развитие и опыт</span></div>
+        <div class="value-mini"><strong>Слёты</strong><span>Региональные и всероссийские события</span></div>
+        <div class="value-mini"><strong>Проекты</strong><span>Организация собственных инициатив</span></div>
+        <div class="value-mini"><strong>Друзья</strong><span>Команда, которая остаётся рядом</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="container">
+      <div class="section-head section-head-v2">
+        <div>
+          <span class="eyebrow">Видео о штабе</span>
+          <h2>Посмотри, как это выглядит изнутри</h2>
+        </div>
+        <p>Ролик можно добавить позже — блок уже подготовлен под встраивание видео.</p>
+      </div>
+      <div id="videoArea" class="video-box video-box-v2">
+        <div class="video-play">▶</div>
+        <div>
+          <strong>Здесь будет ролик о штабе</strong>
+          <span>Пока оставляем красивое место под видео.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section join-cta-section">
+    <div class="container join-cta">
+      <div>
+        <span class="eyebrow eyebrow-dark">Вступить в РСО</span>
+        <h2>Твоя команда может быть здесь</h2>
+        <p>Заполни короткую анкету. Комсостав свяжется с тобой, расскажет об отрядах и поможет сделать первый шаг.</p>
+      </div>
+      <div class="join-cta-actions">
+        <a class="btn btn-light" href="join.html">Заполнить анкету</a>
+        <a class="btn btn-outline-light" href="teams.html">Сначала посмотреть отряды</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section staff-cabinet-section">
+    <div class="container staff-cabinet">
+      <div>
+        <span class="staff-cabinet-kicker">Для командного состава</span>
+        <h3>Личный кабинет Штаба</h3>
+        <p>Заявки, рейтинг, посещаемость, финансы, план-сетка и другие рабочие инструменты находятся в отдельном личном кабинете.</p>
+      </div>
+      <a id="cabinetHomeLink" class="btn btn-dark" href="#" target="_blank">Перейти в личный кабинет →</a>
+    </div>
+  </section>
+</main>
+<div id="footer"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+renderShell('home');
+document.getElementById('heroText').textContent=SITE_DATA.site.heroText;
+document.getElementById('aboutShort').textContent=SITE_DATA.site.aboutShort;
+document.getElementById('cabinetHomeLink').href=SITE_DATA.site.cabinetUrl;
+renderStats('stats',SITE_DATA.stats);
+renderTeams('teams');
+applyHeroImage();
+renderVideo();
+</script>
+</body>
+</html>
