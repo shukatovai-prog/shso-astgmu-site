@@ -23,9 +23,9 @@ window.SITE_DATA = {
   ],
   staff: [
     {name: 'Джумагазиева Аида', role: 'Командир штаба', photo: 'assets/staff-aida.jpg'},
-    {name: 'Аубекиров Артур', role: 'Комиссар штаба', photo: 'assets/staff-artur.jpg'},
+    {name: 'Иринархова Полина', role: 'Комиссар штаба', photo: 'assets/staff-polina.jpg'},
     {name: 'Шукатов Арман', role: 'Мастер (методист) штаба', photo: 'assets/staff-arman.jpg'},
-    {name: 'Унаева Карина', role: 'Руководитель пресс-центра штаба', photo: 'assets/staff-karina.jpg'}
+    {name: 'Бекбулатова Елизавета', role: 'Руководитель пресс-центра штаба', photo: 'assets/staff-liza.jpg'}
   ],
   teams: [
     {
@@ -43,8 +43,8 @@ window.SITE_DATA = {
       achievements: [],
       social: [],
       command: [
-        {name:'Айбулатова Камилла', role:'Командир отряда', vk:'https://vk.com/aybulatovaa'},
-        {name:'Вязовой Родион', role:'Комиссар отряда', vk:'https://vk.com/riggl_rubinrain'},
+        {name:'Ахмедова Фатима', role:'Командир отряда', vk:'https://vk.ru/fatya_uwu'},
+        {name:'Тастемирова Азалия', role:'Комиссар отряда', vk:'https://vk.com/wqutyr'},
         {name:'Мирзоева Анна', role:'Мастер (методист) отряда', vk:'https://vk.com/id269088990'},
         {name:'Сомова Анна', role:'Руководитель прессы отряда', vk:'https://vk.com/nebulgakovskaya'}
       ]
@@ -66,8 +66,8 @@ window.SITE_DATA = {
       social: [],
       command: [
         {name:'Наранова Эвелина', role:'Командир отряда', vk:'https://vk.com/igorevnalina'},
-        {name:'Тлупов Алимхан', role:'Комиссар отряда', vk:'https://vk.com/idprikolist2017'},
-        {name:'Кольченко Влад', role:'Мастер (методист) отряда', vk:'https://vk.com/rosha592'},
+        {name:'Бекиев Асламбек', role:'Комиссар отряда', vk:'https://vk.com/acbek'},
+        {name:'Смагина Валерия', role:'Мастер (методист) отряда', vk:'https://vk.com/valleri.iaaa'},
         {name:'Абдрахманова Эвелина', role:'Руководитель прессы отряда', vk:'https://vk.com/bungeegum0'}
       ]
     },
@@ -112,10 +112,10 @@ window.SITE_DATA = {
         {label:'ВКонтакте', url:'https://vk.com/theneurospin'}
       ],
       command: [
-        {name:'Исаев Кирилл', role:'Командир отряда'},
-        {name:'Полстянова Валентина', role:'Комиссар отряда'},
-        {name:'Каминский Максим', role:'Мастер (методист) отряда'},
-        {name:'Исмагулова Виктория', role:'Руководитель прессы отряда'},
+        {name:'Исаев Кирилл', role:'Командир отряда', vk:'https://vk.com/idkirill_fox'},
+        {name:'Аманов Эрнест', role:'Комиссар отряда', vk:'https://vk.com/pk822988'},
+        {name:'Полстянова Валентина', role:'Мастер (методист) отряда', vk:'https://vk.com/chelovekyumor'},
+        {name:'Исмагулова Виктория', role:'Руководитель прессы отряда', vk:'https://vk.com/krmn1v'},
       ]
     }
   ]
