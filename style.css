@@ -158,20 +158,28 @@
   .gallery-final{grid-template-columns:1fr 1fr}
   .gallery-placeholder:first-child{grid-column:1/-1;grid-row:auto;min-height:300px}
 }
-/* Фото в блоке "Что такое СМО" */
+/* ===== Карточки "Что такое СМО" ===== */
+
+.feature-grid-v2 {
+  align-items: stretch;
+}
 
 .feature-photo-card {
   padding: 0 !important;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: auto !important;
+  min-height: 0 !important;
 }
 
+/* Фото */
 .feature-photo {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 8;
   overflow: hidden;
   background: #eef3ff;
+  flex-shrink: 0;
 }
 
 .feature-photo img {
@@ -183,80 +191,58 @@
 }
 
 .feature-photo-card:hover .feature-photo img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
-.feature-content {
-  padding: 32px 40px 38px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+/* Текстовая часть */
+.feature-photo-card .feature-content {
+  padding: 24px 32px 30px !important;
+  display: grid !important;
+  grid-template-rows: 62px 70px auto !important;
+  gap: 0 !important;
+  flex: 0 0 auto !important;
 }
 
-.feature-content .icon {
-  margin-bottom: 28px;
+/* Цифры */
+.feature-photo-card .icon {
+  margin: 0 !important;
+  align-self: start;
 }
 
-.feature-content h3 {
-  margin-top: auto;
+/* Заголовки */
+.feature-photo-card h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+
+  display: flex !important;
+  align-items: flex-start !important;
+
+  line-height: 1.12;
 }
 
+/* Описание */
+.feature-photo-card p {
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+}
+
+/* Телефон */
 @media (max-width: 768px) {
   .feature-photo {
     aspect-ratio: 16 / 9;
   }
 
-  .feature-content {
-    padding: 24px;
-  }
-
-  .feature-content .icon {
-    margin-bottom: 22px;
-  }
-}
-/* Выравнивание карточек "Что такое СМО" */
-
-.feature-photo-card .feature-content {
-  padding: 32px 40px 38px;
-  display: grid;
-  grid-template-rows: 72px 76px auto;
-  align-content: start;
-}
-
-.feature-photo-card .icon {
-  margin: 0;
-  align-self: start;
-}
-
-.feature-photo-card h3 {
-  margin: 0;
-  align-self: end;
-  min-height: 76px;
-  display: flex;
-  align-items: flex-end;
-}
-
-.feature-photo-card p {
-  margin: 12px 0 0;
-}
-
-@media (max-width: 768px) {
   .feature-photo-card .feature-content {
-    padding: 24px;
-    display: block;
-  }
-
-  .feature-photo-card .icon {
-    margin-bottom: 24px;
+    padding: 22px 22px 26px !important;
+    grid-template-rows: 58px auto auto !important;
   }
 
   .feature-photo-card h3 {
-    min-height: 0;
-    display: block;
-    margin: 0;
+    margin-bottom: 8px !important;
   }
 
   .feature-photo-card p {
-    margin-top: 10px;
+    margin-top: 0 !important;
   }
 }
