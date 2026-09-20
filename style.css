@@ -478,3 +478,29 @@
     padding-top: 20px;
   }
 }
+/* Логотип "Труд Крут" в разделе РСО */
+
+.about-rso-mark {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+
+.about-rso-mark img {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .about-rso-mark img {
+    max-width: 280px;
+  }
+}
