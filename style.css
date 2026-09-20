@@ -385,3 +385,96 @@
     border-radius: 14px !important;
   }
 }
+/* ===== Карточки отрядов с фотографиями ===== */
+
+.team-card-photo {
+  padding: 0 !important;
+  overflow: hidden !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+
+  height: 100% !important;
+}
+
+/* Цветная полоска сверху */
+.team-card-photo::before {
+  z-index: 3;
+}
+
+/* Фото */
+.team-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f1f4f9;
+}
+
+.team-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform .45s ease;
+}
+
+.team-card-photo:hover .team-card-image img {
+  transform: scale(1.04);
+}
+
+/* Вся нижняя часть */
+.team-card-content {
+  padding: 22px 28px 26px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+/* Номер */
+.team-card-content .num {
+  margin: 0 0 24px !important;
+}
+
+/* Название + описание */
+.team-card-text {
+  margin: 0;
+}
+
+.team-card-text h3 {
+  margin: 0 0 10px;
+}
+
+.team-card-text p {
+  margin: 0;
+}
+
+/* Кнопка всегда снизу */
+.team-card-content .open {
+  margin-top: auto !important;
+  padding-top: 24px;
+}
+
+/* Телефон */
+@media (max-width: 768px) {
+
+  .team-card-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .team-card-content {
+    padding: 20px 22px 24px;
+  }
+
+  .team-card-content .num {
+    margin-bottom: 18px !important;
+  }
+
+  .team-card-content .open {
+    padding-top: 20px;
+  }
+}
