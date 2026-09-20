@@ -108,34 +108,71 @@ window.renderTeams=function(target){
     hero.style.backgroundImage=`linear-gradient(180deg,rgba(16,24,40,.10),rgba(16,24,40,.58)),url('${D.site.heroImage}')`;
   };
 
-  window.submitJoin=async function(e){
-    e.preventDefault();
-    const form=e.target;
-    const btn=form.querySelector('button[type=submit]');
-    const note=form.querySelector('.form-status');
-    const data=Object.fromEntries(new FormData(form).entries());
-    data.source='public-join';
-    data.createdAt=new Date().toISOString();
-    btn.disabled=true; btn.textContent='Отправляем…';
-    if(note) note.textContent='';
-    try{
-      if(!D.site.joinEndpoint){
-        throw new Error('Анкета ещё не подключена к Google Таблице. Администратору нужно указать joinEndpoint в data.js.');
-      }
-      const res=await fetch(D.site.joinEndpoint,{
-        method:'POST',
-        headers:{'Content-Type':'text/plain;charset=utf-8'},
-        body:JSON.stringify(data)
-      });
-      if(!res.ok) throw new Error('Сервер вернул ошибку '+res.status);
-      if(note){note.className='form-status success';note.textContent='Анкета отправлена. Комсостав свяжется с тобой.';}
-      form.reset();
-    }catch(err){
-      if(note){note.className='form-status error';note.textContent=err.message||'Не удалось отправить анкету.';}
-    }finally{
-      btn.disabled=false; btn.textContent='Отправить анкету';
+  window.submitJoin = async function(e){
+  e.preventDefault();
+
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const note = form.querySelector('.form-status');
+
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  data.source = 'public-join';
+  data.createdAt = new Date().toISOString();
+
+  btn.disabled = true;
+  btn.textContent = 'Отправляем…';
+
+  if(note){
+    note.className = 'form-status';
+    note.textContent = '';
+  }
+
+  try{
+    if(!D.site.joinEndpoint){
+      throw new Error('Приём анкет временно недоступен.');
     }
-  };
+
+    const res = await fetch(D.site.joinEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if(!res.ok){
+      throw new Error('Сервер вернул ошибку ' + res.status);
+    }
+
+    const result = await res.json();
+
+    if(result.ok !== true){
+      throw new Error(result.error || 'Не удалось сохранить анкету.');
+    }
+
+    if(note){
+      note.className = 'form-status success';
+      note.textContent =
+        'Анкета отправлена. Комсостав свяжется с тобой.';
+    }
+
+    form.reset();
+
+  }catch(err){
+    console.error('JOIN APPLICATION ERROR:', err);
+
+    if(note){
+      note.className = 'form-status error';
+      note.textContent =
+        err.message || 'Не удалось отправить анкету. Попробуй ещё раз.';
+    }
+
+  }finally{
+    btn.disabled = false;
+    btn.textContent = 'Отправить анкету';
+  }
+};
 
   window.renderVideo=function(){
     const box=byId('videoArea');
