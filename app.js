@@ -60,14 +60,34 @@
     byId(target).innerHTML=stats.map(s=>`<div class="stat"><strong>${s.value}</strong><span>${s.label}</span></div>`).join('');
   };
 
-  window.renderTeams=function(target){
-    byId(target).innerHTML=D.teams.map((t,i)=>`
-      <a class="team-card" style="--accent:${t.accent}" href="./teams/${t.slug}/">
+window.renderTeams=function(target){
+  byId(target).innerHTML=D.teams.map((t,i)=>`
+    <a class="team-card team-card-photo"
+       style="--accent:${t.accent}"
+       href="./teams/${t.slug}/">
+
+      <div class="team-card-image">
+        <img
+          src="./assets/images/teams/${t.slug}.jpg"
+          alt="${t.name}"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="team-card-content">
         <span class="num">0${i+1}</span>
-        <div><h3>${t.name}</h3><p>${t.description}</p></div>
+
+        <div class="team-card-text">
+          <h3>${t.name}</h3>
+          <p>${t.description}</p>
+        </div>
+
         <span class="open">Открыть отряд →</span>
-      </a>`).join('');
-  };
+      </div>
+
+    </a>
+  `).join('');
+};
 
   window.renderStaff=function(target,staff,pathPrefix=''){
     const fallback=pathPrefix+'assets/person-placeholder.svg';
