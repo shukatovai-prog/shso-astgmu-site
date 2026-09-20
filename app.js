@@ -13,7 +13,9 @@
     return `<header class="nav">
       <div class="container nav-inner">
         <a class="brand" href="${p}index.html">
-          <div class="brand-mark">СМО</div>
+         <div class="brand-mark">
+  <img src="/assets/images/logo.shso.png" alt="Эмблема ШСО">
+</div>
           <div class="brand-copy"><b>${D.site.shortTitle}</b><span>${D.site.direction}</span></div>
         </a>
         <button class="nav-toggle" type="button" onclick="toggleMenu()">Меню</button>
