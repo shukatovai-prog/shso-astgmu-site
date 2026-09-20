@@ -504,3 +504,46 @@
     max-width: 280px;
   }
 }
+/* ===== Светлый блок РСО ===== */
+
+.about-rso-section {
+  background: #ffffff !important;
+  color: #101828 !important;
+}
+
+/* Заголовок */
+.about-rso-section h2 {
+  color: #101828 !important;
+}
+
+/* Описание */
+.about-rso-section p {
+  color: #667085 !important;
+}
+
+/* Плашка "Большое движение" */
+.about-rso-section .eyebrow-dark {
+  color: #1467e8 !important;
+  background: #f2f6ff !important;
+  border-color: #c9dcff !important;
+}
+
+/* Область с логотипом */
+.about-rso-mark {
+  background: transparent !important;
+}
+
+/* Логотип */
+.about-rso-mark img {
+  width: 100% !important;
+  max-width: 480px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .about-rso-mark img {
+    max-width: 300px !important;
+  }
+}
