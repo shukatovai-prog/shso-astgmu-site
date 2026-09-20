@@ -296,3 +296,19 @@
   min-height: 0 !important;
   align-self: start !important;
 }
+/* Одинаковая высота трёх карточек */
+.feature-grid-v2 {
+  align-items: stretch !important;
+}
+
+.feature-photo-card {
+  height: 100% !important;
+  align-self: stretch !important;
+}
+
+/* Контент остаётся компактным сверху */
+.feature-photo-card .feature-content {
+  height: auto !important;
+  min-height: 0 !important;
+  flex: 0 0 auto !important;
+}
