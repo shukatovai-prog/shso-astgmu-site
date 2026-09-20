@@ -347,3 +347,41 @@
   border: 0 !important;
   display: block !important;
 }
+/* Эмблема ШСО в шапке */
+
+.brand-mark {
+  width: 80px !important;
+  height: 80px !important;
+  min-width: 80px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+  border-radius: 20px !important;
+
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.brand-mark img {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block !important;
+  object-fit: contain !important;
+}
+
+/* На телефоне */
+@media (max-width: 768px) {
+  .brand-mark {
+    width: 54px !important;
+    height: 54px !important;
+    min-width: 54px !important;
+    border-radius: 14px !important;
+  }
+}
