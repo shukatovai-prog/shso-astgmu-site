@@ -68,7 +68,7 @@ window.SITE_DATA = {
         {name:'Наранова Эвелина', role:'Командир отряда', vk:'https://vk.com/igorevnalina', photo: "assets/df-k.jpg"},
         {name:'Бекиев Асламбек', role:'Комиссар отряда', vk:'https://vk.com/acbek', photo: "assets/df-kom.jpg"},
         {name:'Смагина Валерия', role:'Мастер (методист) отряда', vk:'https://vk.com/valleri.iaaa', photo: "assets/df-m.jpg"},
-        {name:'Абдрахманова Эвелина', role:'Руководитель прессы отряда', vk:'https://vk.com/bungeegum0', photo: "assets/gk-p.jpg"}
+        {name:'Абдрахманова Эвелина', role:'Руководитель прессы отряда', vk:'https://vk.com/bungeegum0', photo: "assets/df-p.jpg"}
       ]
     },
     {
