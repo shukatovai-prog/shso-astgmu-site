@@ -1041,3 +1041,37 @@
   background: #0d5bd1;
   transform: translateY(-2px);
 }
+/* Фото комсостава */
+
+.person > img {
+  width: 100%;
+  height: 330px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center 20%;
+
+  background: #f2f4f7;
+}
+
+/* Карточка */
+
+.person {
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+/* Текстовая часть */
+
+.person-body {
+  padding: 20px 22px 22px;
+}
+
+/* Телефон */
+
+@media (max-width: 600px) {
+  .person > img {
+    height: 360px;
+  }
+}
