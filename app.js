@@ -31,55 +31,103 @@
     </header>`;
   }
 
-  <footer class="site-footer">
-  <div class="container footer-main">
+ function footer(active){
+  const p = prefixFor(active);
 
-    <div class="footer-brand">
-      <div class="footer-brand-top">
-        <img src="/assets/images/logo.shso.png" alt="ШСО Астраханского ГМУ">
-        <div>
-          <strong>Штаб студенческих отрядов</strong>
-          <span>Астраханского ГМУ</span>
+  return `
+    <footer class="site-footer">
+      <div class="container footer-main">
+
+        <div class="footer-brand">
+          <div class="footer-brand-top">
+
+            <img
+              src="${p}assets/images/logo.shso.png"
+              alt="Эмблема ШСО"
+            >
+
+            <div>
+              <strong>Штаб студенческих отрядов</strong>
+              <span>Астраханского ГМУ</span>
+            </div>
+
+          </div>
+
+          <p>
+            Студенческие медицинские отряды — команда,
+            профессиональное развитие и яркая студенческая жизнь.
+          </p>
         </div>
+
+
+        <div class="footer-nav">
+
+          <div class="footer-nav-group">
+            <span>Навигация</span>
+
+            <a href="${p}about.html">
+              О нас
+            </a>
+
+            <a href="${p}teams.html">
+              Наши отряды
+            </a>
+
+            <a href="${p}join.html">
+              Вступить в РСО
+            </a>
+          </div>
+
+
+          <div class="footer-nav-group">
+            <span>Связь</span>
+
+            <a href="${p}contacts.html">
+              Контакты
+            </a>
+
+            <a
+              href="${D.site.vkUrl || '#'}"
+              target="_blank"
+              rel="noopener"
+            >
+              ВКонтакте
+            </a>
+          </div>
+
+
+          <div class="footer-nav-group">
+            <span>Сервисы</span>
+
+            <a
+              class="footer-cabinet"
+              href="${D.site.cabinetUrl}"
+              target="_blank"
+              rel="noopener"
+            >
+              Личный кабинет →
+            </a>
+          </div>
+
+        </div>
+
       </div>
 
-      <p>
-        Студенческие медицинские отряды — команда,
-        профессиональное развитие и яркая студенческая жизнь.
-      </p>
-    </div>
 
-    <div class="footer-nav">
+      <div class="container footer-bottom">
 
-      <div class="footer-nav-group">
-        <span>Навигация</span>
-        <a href="/about.html">О нас</a>
-        <a href="/teams.html">Отряды</a>
-        <a href="/join.html">Вступить в РСО</a>
+        <span>
+          © 2026 ШСО Астраханского ГМУ
+        </span>
+
+        <span>
+          Российские студенческие отряды
+        </span>
+
       </div>
-
-      <div class="footer-nav-group">
-        <span>Связь</span>
-        <a href="https://vk.com/" target="_blank" rel="noopener">ВКонтакте</a>
-        <a href="/contacts.html">Контакты</a>
-      </div>
-
-      <div class="footer-nav-group">
-        <span>Сервисы</span>
-        <a class="footer-cabinet" href="https://lk.shso-astgmu.ru">
-          Личный кабинет →
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="container footer-bottom">
-    <span>© 2026 ШСО Астраханского ГМУ</span>
-    <span>Российские студенческие отряды</span>
-  </div>
-</footer>
+    </footer>
+  `;
+}
 
   window.renderShell=function(active){
     byId('nav').innerHTML=nav(active);
