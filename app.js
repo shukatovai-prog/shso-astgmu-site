@@ -31,25 +31,55 @@
     </header>`;
   }
 
-  function footer(active){
-    const p=prefixFor(active);
-    return `<footer class="footer">
-      <div class="container footer-grid">
+  <footer class="site-footer">
+  <div class="container footer-main">
+
+    <div class="footer-brand">
+      <div class="footer-brand-top">
+        <img src="/assets/images/logo.shso.png" alt="ШСО Астраханского ГМУ">
         <div>
-          <strong>${D.site.title}</strong>
-          <p>${D.site.direction}</p>
-          <small>© ${new Date().getFullYear()} ШСО Астраханского ГМУ</small>
-        </div>
-        <div class="footer-links">
-          <a href="${p}about.html">О нас</a>
-          <a href="${p}teams.html">Отряды</a>
-          <a href="${p}join.html">Вступить</a>
-          <a href="${D.site.vkUrl}" target="_blank" rel="noopener">ВКонтакте</a>
-          <a href="${D.site.cabinetUrl}" target="_blank" rel="noopener">Личный кабинет</a>
+          <strong>Штаб студенческих отрядов</strong>
+          <span>Астраханского ГМУ</span>
         </div>
       </div>
-    </footer>`;
-  }
+
+      <p>
+        Студенческие медицинские отряды — команда,
+        профессиональное развитие и яркая студенческая жизнь.
+      </p>
+    </div>
+
+    <div class="footer-nav">
+
+      <div class="footer-nav-group">
+        <span>Навигация</span>
+        <a href="/about.html">О нас</a>
+        <a href="/teams.html">Отряды</a>
+        <a href="/join.html">Вступить в РСО</a>
+      </div>
+
+      <div class="footer-nav-group">
+        <span>Связь</span>
+        <a href="https://vk.com/" target="_blank" rel="noopener">ВКонтакте</a>
+        <a href="/contacts.html">Контакты</a>
+      </div>
+
+      <div class="footer-nav-group">
+        <span>Сервисы</span>
+        <a class="footer-cabinet" href="https://lk.shso-astgmu.ru">
+          Личный кабинет →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 ШСО Астраханского ГМУ</span>
+    <span>Российские студенческие отряды</span>
+  </div>
+</footer>
 
   window.renderShell=function(active){
     byId('nav').innerHTML=nav(active);
