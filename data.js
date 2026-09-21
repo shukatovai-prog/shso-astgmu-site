@@ -43,10 +43,10 @@ window.SITE_DATA = {
       achievements: [],
       social: [],
       command: [
-        {name:'Ахмедова Фатима', role:'Командир отряда', vk:'https://vk.ru/fatya_uwu'},
-        {name:'Тастемирова Азалия', role:'Комиссар отряда', vk:'https://vk.com/wqutyr'},
-        {name:'Мирзоева Анна', role:'Мастер (методист) отряда', vk:'https://vk.com/id269088990'},
-        {name:'Сомова Анна', role:'Руководитель прессы отряда', vk:'https://vk.com/nebulgakovskaya'}
+        {name:'Ахмедова Фатима', role:'Командир отряда', vk:'https://vk.ru/fatya_uwu', photo: "assets/images/gk-k.jpg"},
+        {name:'Тастемирова Азалия', role:'Комиссар отряда', vk:'https://vk.com/wqutyr', photo: "assets/images/gk-kom.jpg"},
+        {name:'Мирзоева Анна', role:'Мастер (методист) отряда', vk:'https://vk.com/id269088990', photo: "assets/images/gk-m.jpg"},
+        {name:'Сомова Анна', role:'Руководитель прессы отряда', vk:'https://vk.com/nebulgakovskaya', photo: "assets/images/gk-p.jpg"}
       ]
     },
     {
@@ -65,10 +65,10 @@ window.SITE_DATA = {
       achievements: [],
       social: [],
       command: [
-        {name:'Наранова Эвелина', role:'Командир отряда', vk:'https://vk.com/igorevnalina'},
-        {name:'Бекиев Асламбек', role:'Комиссар отряда', vk:'https://vk.com/acbek'},
-        {name:'Смагина Валерия', role:'Мастер (методист) отряда', vk:'https://vk.com/valleri.iaaa'},
-        {name:'Абдрахманова Эвелина', role:'Руководитель прессы отряда', vk:'https://vk.com/bungeegum0'}
+        {name:'Наранова Эвелина', role:'Командир отряда', vk:'https://vk.com/igorevnalina', photo: "assets/images/df-k.jpg"},
+        {name:'Бекиев Асламбек', role:'Комиссар отряда', vk:'https://vk.com/acbek', photo: "assets/images/df-kom.jpg"},
+        {name:'Смагина Валерия', role:'Мастер (методист) отряда', vk:'https://vk.com/valleri.iaaa', photo: "assets/images/df-m.jpg"},
+        {name:'Абдрахманова Эвелина', role:'Руководитель прессы отряда', vk:'https://vk.com/bungeegum0', photo: "assets/images/gk-p.jpg"}
       ]
     },
     {
@@ -89,10 +89,10 @@ window.SITE_DATA = {
         {label:'ВКонтакте', url:'https://vk.com/club232683681'}
       ],
       command: [
-        {name:'Ягодина Анна', role:'Командир отряда', vk:'https://vk.com/nutoooon'},
-        {name:'Ванина Арина', role:'Комиссар отряда', vk:'https://vk.com/arinarvni'},
-        {name:'Сайкина Татьяна', role:'Мастер (методист) отряда', vk:'https://vk.com/tanyubatkovna'},
-        {name:'Капралова Милена', role:'Руководитель прессы отряда', vk:'https://vk.com/maal3na'}
+        {name:'Ягодина Анна', role:'Командир отряда', vk:'https://vk.com/nutoooon', photo: "assets/images/as-k.jpg"},
+        {name:'Ванина Арина', role:'Комиссар отряда', vk:'https://vk.com/arinarvni', photo: "assets/images/as-kom.jpg"},
+        {name:'Сайкина Татьяна', role:'Мастер (методист) отряда', vk:'https://vk.com/tanyubatkovna', photo: "assets/images/as-m.jpg"},
+        {name:'Капралова Милена', role:'Руководитель прессы отряда', vk:'https://vk.com/maal3na', photo: "assets/images/as-p.jpg"}
       ]
     },
     {
@@ -112,10 +112,10 @@ window.SITE_DATA = {
         {label:'ВКонтакте', url:'https://vk.com/theneurospin'}
       ],
       command: [
-        {name:'Исаев Кирилл', role:'Командир отряда', vk:'https://vk.com/idkirill_fox'},
-        {name:'Аманов Эрнест', role:'Комиссар отряда', vk:'https://vk.com/pk822988'},
-        {name:'Полстянова Валентина', role:'Мастер (методист) отряда', vk:'https://vk.com/chelovekyumor'},
-        {name:'Исмагулова Виктория', role:'Руководитель прессы отряда', vk:'https://vk.com/krmn1v'},
+        {name:'Исаев Кирилл', role:'Командир отряда', vk:'https://vk.com/idkirill_fox', photo: "assets/images/ns-k.jpg"},
+        {name:'Аманов Эрнест', role:'Комиссар отряда', vk:'https://vk.com/pk822988', photo: "assets/images/ns-kom.jpg"},
+        {name:'Полстянова Валентина', role:'Мастер (методист) отряда', vk:'https://vk.com/chelovekyumor', photo: "assets/images/ns-m.jpg"},
+        {name:'Исмагулова Виктория', role:'Руководитель прессы отряда', vk:'https://vk.com/krmn1v', photo: "assets/images/ns-p.jpg"},
       ]
     }
   ]
