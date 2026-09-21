@@ -875,3 +875,53 @@
     font-size: 52px !important;
   }
 }
+/* ===== Компактные карточки "Кто мы" ===== */
+
+.about-functions-grid {
+  align-items: stretch !important;
+}
+
+.about-function-card {
+  min-height: 0 !important;
+  height: auto !important;
+
+  padding: 28px 30px !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Номер */
+.about-function-card > span {
+  margin: 0 0 28px 0 !important;
+}
+
+/* Заголовок */
+.about-function-card h3 {
+  margin: 0 0 10px 0 !important;
+  padding: 0 !important;
+
+  min-height: 0 !important;
+
+  font-size: 20px !important;
+  line-height: 1.2 !important;
+}
+
+/* Описание */
+.about-function-card p {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  line-height: 1.5 !important;
+}
+
+/* Телефон */
+@media (max-width: 768px) {
+  .about-function-card {
+    padding: 24px !important;
+  }
+
+  .about-function-card > span {
+    margin-bottom: 22px !important;
+  }
+}
