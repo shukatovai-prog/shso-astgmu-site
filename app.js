@@ -291,8 +291,7 @@ window.renderTeams=function(target){
     byId('achievements').innerHTML=t.achievements.length
       ? t.achievements.map(a=>`<div class="achievement">${a}</div>`).join('')
       : `<div class="empty-note">Раздел достижений будет дополняться.</div>`;
-    renderStaff('command',t.command.map(x=>({...x,photo:'assets/person-placeholder.svg'})),'../../');
-    const social=byId('teamSocial');
+   renderStaff('command', t.command, '../../');
     if(social){
       social.innerHTML=t.social&&t.social.length
         ? t.social.map(s=>`<a class="btn btn-secondary" href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`).join('')
