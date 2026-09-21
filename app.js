@@ -39,19 +39,12 @@
       <div class="container footer-main">
 
         <div class="footer-brand">
-          <div class="footer-brand-top">
-
-            <img
-              src="${p}assets/images/logo.shso.png"
-              alt="Эмблема ШСО"
-            >
-
-            <div>
-              <strong>Штаб студенческих отрядов</strong>
-              <span>Астраханского ГМУ</span>
-            </div>
-
-          </div>
+         <div class="footer-brand-top">
+  <div>
+    <strong>Штаб студенческих отрядов</strong>
+    <span>Астраханского ГМУ</span>
+  </div>
+</div>
 
           <p>
             Студенческие медицинские отряды — команда,
