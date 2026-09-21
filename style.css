@@ -724,3 +724,25 @@
   }
 
 }
+/* Белая подложка под эмблему в футере */
+.footer-brand-top img {
+  width: 76px !important;
+  height: 76px !important;
+  object-fit: contain !important;
+
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 50px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .18);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .footer-brand-top img {
+    width: 62px !important;
+    height: 62px !important;
+    padding: 7px;
+    border-radius: 15px;
+  }
+}
