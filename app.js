@@ -108,7 +108,7 @@ window.renderTeams=function(target){
     hero.style.backgroundImage=`linear-gradient(180deg,rgba(16,24,40,.10),rgba(16,24,40,.58)),url('${D.site.heroImage}')`;
   };
 
-  window.submitJoin = async function(e){
+ window.submitJoin = async function(e){
   e.preventDefault();
 
   const form = e.target;
@@ -117,7 +117,8 @@ window.renderTeams=function(target){
 
   const data = Object.fromEntries(new FormData(form).entries());
 
-  data.source = 'public-join';
+  // Источник заявки
+  data.source = 'public-site';
   data.createdAt = new Date().toISOString();
 
   btn.disabled = true;
@@ -128,49 +129,67 @@ window.renderTeams=function(target){
     note.textContent = '';
   }
 
-  try{
-    if(!D.site.joinEndpoint){
-      throw new Error('Приём анкет временно недоступен.');
+  try {
+
+    const response = await fetch(
+      'https://lk.shso-astgmu.ru/api/join-application',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }
+    );
+
+    let result = {};
+
+    try {
+      result = await response.json();
+    } catch (_) {
+      throw new Error('Сервер вернул некорректный ответ.');
     }
 
-    const res = await fetch(D.site.joinEndpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8'
-      },
-      body: JSON.stringify(data)
-    });
-
-    if(!res.ok){
-      throw new Error('Сервер вернул ошибку ' + res.status);
-    }
-
-    const result = await res.json();
-
-    if(result.ok !== true){
-      throw new Error(result.error || 'Не удалось сохранить анкету.');
+    if(!response.ok || result.ok !== true){
+      throw new Error(
+        result.error ||
+        result.message ||
+        'Не удалось отправить анкету.'
+      );
     }
 
     if(note){
       note.className = 'form-status success';
       note.textContent =
-        'Анкета отправлена. Комсостав свяжется с тобой.';
+        'Анкета отправлена! Комсостав свяжется с тобой.';
     }
 
     form.reset();
 
-  }catch(err){
+    // Скрываем специальность ординатуры после очистки формы
+    const residencyField =
+      document.getElementById('residencySpecialtyField');
+
+    if(residencyField){
+      residencyField.style.display = 'none';
+    }
+
+  } catch(err) {
+
     console.error('JOIN APPLICATION ERROR:', err);
 
     if(note){
       note.className = 'form-status error';
       note.textContent =
-        err.message || 'Не удалось отправить анкету. Попробуй ещё раз.';
+        err.message ||
+        'Не удалось отправить анкету. Попробуй ещё раз.';
     }
 
-  }finally{
+  } finally {
+
     btn.disabled = false;
     btn.textContent = 'Отправить анкету';
+
   }
 };
 
