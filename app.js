@@ -273,47 +273,120 @@ window.renderTeams=function(target){
   };
 
   window.renderTeamPage=function(slug){
-    const t=D.teams.find(x=>x.slug===slug);
-    if(!t)return;
-    document.documentElement.style.setProperty('--team-accent',t.accent);
-    const hero=byId('teamHero');
-    hero.style.backgroundImage=`linear-gradient(90deg,rgba(16,24,40,.94),rgba(16,24,40,.66)),url('../../${t.heroImage}')`;
-    hero.innerHTML=`<div class="container">
-      <div class="team-kicker" style="color:${t.accent}">${t.tagline}</div>
+  const t=D.teams.find(x=>x.slug===slug);
+  if(!t)return;
+
+  document.documentElement.style.setProperty('--team-accent',t.accent);
+
+  const hero=byId('teamHero');
+
+  hero.style.backgroundImage=
+    `linear-gradient(90deg,rgba(16,24,40,.94),rgba(16,24,40,.66)),url('../../${t.heroImage}')`;
+
+  hero.innerHTML=`
+    <div class="container">
+      <div class="team-kicker" style="color:${t.accent}">
+        ${t.tagline}
+      </div>
+
       <h1>${t.name}</h1>
+
       <p>${t.description}</p>
+
       <div class="actions">
-        <a class="btn btn-primary" href="../../join.html?team=${encodeURIComponent(t.name)}">Хочу вступить</a>
-        <a class="btn btn-secondary" href="../../teams.html">Все отряды</a>
+        <a class="btn btn-primary"
+           href="../../join.html?team=${encodeURIComponent(t.name)}">
+          Хочу вступить
+        </a>
+
+        <a class="btn btn-secondary"
+           href="../../teams.html">
+          Все отряды
+        </a>
       </div>
-    </div>`;
-    renderStats('teamStats',t.stats);
-  
-    const videoBox = byId('teamVideo');
-if (videoBox) {
-  if (t.videoUrl) {
-    videoBox.innerHTML = `
-      <div class="team-video-player">
-        <video controls playsinline preload="metadata">
-          <source src="${t.videoUrl}" type="video/mp4">
-          Ваш браузер не поддерживает видео.
-        </video>
-      </div>
-    `;
-  } else {
-    videoBox.style.display = 'none';
-  }
-}
-    byId('achievements').innerHTML=t.achievements.length
-      ? t.achievements.map(a=>`<div class="achievement">${a}</div>`).join('')
-      : `<div class="empty-note">Раздел достижений будет дополняться.</div>`;
-   renderStaff('command', t.command, '../../');
-    if(social){
-      social.innerHTML=t.social&&t.social.length
-        ? t.social.map(s=>`<a class="btn btn-secondary" href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`).join('')
-        : `<span class="muted">Ссылки на социальные сети добавим позже.</span>`;
+    </div>
+  `;
+
+  renderStats('teamStats',t.stats);
+
+
+  /* ===== ВИДЕО ОТРЯДА ===== */
+
+  const videoBox=byId('teamVideo');
+
+  if(videoBox){
+
+    if(t.videoUrl){
+
+      videoBox.innerHTML=`
+        <div class="team-video-player">
+          <video
+            controls
+            playsinline
+            preload="metadata"
+          >
+            <source
+              src="${t.videoUrl}"
+              type="video/mp4"
+            >
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+      `;
+
+    }else{
+
+      const videoSection=
+        videoBox.closest('.team-video-section');
+
+      if(videoSection){
+        videoSection.style.display='none';
+      }
+
     }
-  };
+  }
+
+
+  /* ===== ДОСТИЖЕНИЯ ===== */
+
+  byId('achievements').innerHTML=t.achievements.length
+    ? t.achievements
+        .map(a=>`<div class="achievement">${a}</div>`)
+        .join('')
+    : `<div class="empty-note">
+         Раздел достижений будет дополняться.
+       </div>`;
+
+
+  /* ===== КОМСОСТАВ ===== */
+
+  renderStaff('command',t.command,'../../');
+
+
+  /* ===== СОЦИАЛЬНЫЕ СЕТИ ===== */
+
+  const social=byId('teamSocial');
+
+  if(social){
+
+    social.innerHTML=t.social&&t.social.length
+      ? t.social
+          .map(s=>`
+            <a
+              class="btn btn-secondary"
+              href="${s.url}"
+              target="_blank"
+              rel="noopener"
+            >
+              ${s.label}
+            </a>
+          `)
+          .join('')
+      : `<span class="muted">
+           Ссылки на социальные сети добавим позже.
+         </span>`;
+  }
+};
 
   window.prefillJoinTeam=function(){
     const q=new URLSearchParams(location.search).get('team');
