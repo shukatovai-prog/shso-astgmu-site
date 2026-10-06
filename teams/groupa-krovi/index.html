@@ -114,128 +114,61 @@
 
   </div>
 </section>
-</main><div id="footer"></div><script src="../../data.js?v=20261006-2"></script>
-<script src="../../app.js?v=20261006-2"></script><script>
-renderShell('team');
-renderTeamPage('groupa-krovi');
-initGalleryLightbox();
-</script>
+</main>
+
+<div id="footer"></div>
+
+
+<!-- FULLSCREEN ГАЛЕРЕЯ -->
+
 <div id="galleryLightbox" class="gallery-lightbox">
-  <button class="lightbox-close" type="button" aria-label="Закрыть">×</button>
 
-  <button class="lightbox-arrow lightbox-prev"
-          type="button"
-          aria-label="Предыдущее фото">‹</button>
+  <button
+    class="lightbox-close"
+    type="button"
+    aria-label="Закрыть">
+    ×
+  </button>
 
-  <img id="lightboxImage" src="" alt="Фотография отряда">
+  <button
+    class="lightbox-arrow lightbox-prev"
+    type="button"
+    aria-label="Предыдущее фото">
+    ‹
+  </button>
 
-  <button class="lightbox-arrow lightbox-next"
-          type="button"
-          aria-label="Следующее фото">›</button>
+  <img
+    id="lightboxImage"
+    src=""
+    alt="Фотография отряда">
 
-  <div id="lightboxCounter" class="lightbox-counter"></div>
+  <button
+    class="lightbox-arrow lightbox-next"
+    type="button"
+    aria-label="Следующее фото">
+    ›
+  </button>
+
+  <div
+    id="lightboxCounter"
+    class="lightbox-counter">
+  </div>
+
 </div>
-  <script>
-document.addEventListener('DOMContentLoaded', function () {
 
-  const photos = Array.from(
-    document.querySelectorAll('.gallery-photo img')
-  );
 
-  const lightbox = document.getElementById('galleryLightbox');
-  const lightboxImage = document.getElementById('lightboxImage');
-  const counter = document.getElementById('lightboxCounter');
-  const closeBtn = document.querySelector('.lightbox-close');
-  const prevBtn = document.querySelector('.lightbox-prev');
-  const nextBtn = document.querySelector('.lightbox-next');
+<!-- ОСНОВНЫЕ СКРИПТЫ -->
 
-  if (!photos.length || !lightbox || !lightboxImage) {
-    return;
-  }
+<script src="../../data.js?v=20261006-3"></script>
+<script src="../../app.js?v=20261006-lightbox5"></script>
 
-  let currentIndex = 0;
+<script>
+  renderShell('team');
+  renderTeamPage('groupa-krovi');
 
-  function showPhoto(index) {
-    if (index < 0) {
-      index = photos.length - 1;
-    }
-
-    if (index >= photos.length) {
-      index = 0;
-    }
-
-    currentIndex = index;
-
-    lightboxImage.src = photos[currentIndex].src;
-    lightboxImage.alt = photos[currentIndex].alt || 'Фотография отряда';
-
-    if (counter) {
-      counter.textContent =
-        (currentIndex + 1) + ' / ' + photos.length;
-    }
-  }
-
-  function openLightbox(index) {
-    showPhoto(index);
-
-    lightbox.classList.add('open');
-    document.body.classList.add('lightbox-open');
-  }
-
-  function closeLightbox() {
-    lightbox.classList.remove('open');
-    document.body.classList.remove('lightbox-open');
-  }
-
-  photos.forEach(function(photo, index) {
-    photo.addEventListener('click', function() {
-      openLightbox(index);
-    });
-  });
-
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeLightbox);
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', function() {
-      showPhoto(currentIndex - 1);
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', function() {
-      showPhoto(currentIndex + 1);
-    });
-  }
-
-  lightbox.addEventListener('click', function(event) {
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-  });
-
-  document.addEventListener('keydown', function(event) {
-
-    if (!lightbox.classList.contains('open')) {
-      return;
-    }
-
-    if (event.key === 'Escape') {
-      closeLightbox();
-    }
-
-    if (event.key === 'ArrowLeft') {
-      showPhoto(currentIndex - 1);
-    }
-
-    if (event.key === 'ArrowRight') {
-      showPhoto(currentIndex + 1);
-    }
-
-  });
-
-});
+  /* ВАЖНО: lightbox уже существует выше */
+  initGalleryLightbox();
 </script>
+
 </body>
 </html>
