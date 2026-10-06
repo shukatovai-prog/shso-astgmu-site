@@ -42,7 +42,16 @@ window.SITE_DATA = {
         {value:'2018', label:'начало истории'}
       ],
       achievements: [],
-      social: [],
+      social: [
+  {
+    label: 'ВКонтакте',
+    url: 'https://vk.ru/rsogruppakrovi'
+  },
+  {
+    label: 'Telegram',
+    url: 'https://t.me/https://t.me/groupblood4'
+  }
+],
       command: [
         {name:'Ахмедова Фатима', role:'Командир отряда', vk:'https://vk.ru/fatya_uwu', photo: "assets/gk-k.jpg"},
         {name:'Тастемирова Азалия', role:'Комиссар отряда', vk:'https://vk.com/wqutyr', photo: "assets/gk-kom.jpg"},
@@ -64,7 +73,12 @@ window.SITE_DATA = {
         {value:'Татарстан', label:'место первой целины'}
       ],
       achievements: [],
-      social: [],
+       social: [
+  {
+    label: 'ВКонтакте',
+    url: 'https://vk.ru/smo_dopamine'
+  },
+],
       command: [
         {name:'Наранова Эвелина', role:'Командир отряда', vk:'https://vk.com/igorevnalina', photo: "assets/df-k.jpg"},
         {name:'Бекиев Асламбек', role:'Комиссар отряда', vk:'https://vk.com/acbek', photo: "assets/df-kom.jpg"},
