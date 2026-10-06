@@ -49,7 +49,7 @@ window.SITE_DATA = {
   },
   {
     label: 'Telegram',
-    url: 'https://t.me/https://t.me/groupblood4'
+    url: 'https://t.me/groupblood4'
   }
 ],
       command: [
