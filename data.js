@@ -31,6 +31,7 @@ window.SITE_DATA = {
     {
       slug: 'groupa-krovi',
       name: 'Группа крови',
+      videoUrl: 'https://storage.yandexcloud.net/shso-astgmu-video/gruppa-krovi.mp4',
       tagline: 'СМО «Группа крови»',
       founded: '2018',
       description: 'Мы начали свою историю в 2018 году, и с тех пор многое изменилось: мы стали сильнее, увереннее и готовы дальше следовать своей цели.',
