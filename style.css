@@ -1135,3 +1135,163 @@
     min-height: 220px;
   }
 }
+/* =========================
+   LIGHTBOX ГАЛЕРЕИ
+========================= */
+
+.gallery-photo {
+  cursor: zoom-in;
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 90px;
+
+  background: rgba(5, 10, 20, .94);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease;
+}
+
+.gallery-lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-lightbox img {
+  display: block;
+
+  max-width: min(1200px, 90vw);
+  max-height: 88vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,.35);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+
+  width: 50px;
+  height: 50px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.12);
+  color: #fff;
+
+  font-size: 34px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 56px;
+  height: 56px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.12);
+  color: #fff;
+
+  font-size: 42px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
+}
+
+.lightbox-close:hover,
+.lightbox-arrow:hover {
+  background: rgba(255,255,255,.22);
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.12);
+  color: #fff;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+
+  .gallery-lightbox {
+    padding: 70px 16px;
+  }
+
+  .gallery-lightbox img {
+    max-width: 100%;
+    max-height: 78vh;
+    border-radius: 14px;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 15px;
+  }
+
+  .lightbox-arrow {
+    width: 46px;
+    height: 46px;
+
+    top: auto;
+    bottom: 20px;
+
+    transform: none;
+  }
+
+  .lightbox-prev {
+    left: 18px;
+  }
+
+  .lightbox-next {
+    right: 18px;
+  }
+
+  .lightbox-counter {
+    bottom: 29px;
+  }
+}
