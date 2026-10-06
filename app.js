@@ -14,7 +14,7 @@
       <div class="container nav-inner">
         <a class="brand" href="${p}index.html">
          <div class="brand-mark">
-  <img src="${p}assets/images/logo.shso.png" alt="Эмблема ШСО">
+  <img src="${p}assets/images/logo.shso.png?v=20261006-1" alt="Эмблема ШСО">
 </div>
           <div class="brand-copy"><b>${D.site.shortTitle}</b><span>${D.site.direction}</span></div>
         </a>
