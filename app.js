@@ -389,9 +389,177 @@ window.renderTeams=function(target){
 };
 
   window.prefillJoinTeam=function(){
-    const q=new URLSearchParams(location.search).get('team');
-    if(!q)return;
-    const sel=document.querySelector('select[name=team]');
-    if(sel) sel.value=q;
-  };
+  const q=new URLSearchParams(location.search).get('team');
+  if(!q)return;
+
+  const sel=document.querySelector('select[name=team]');
+
+  if(sel){
+    sel.value=q;
+  }
+};
+
+
+/* ==================================================
+   ГАЛЕРЕЯ — FULLSCREEN LIGHTBOX
+================================================== */
+
+window.initGalleryLightbox=function(){
+
+  const photos=
+    Array.from(document.querySelectorAll('.gallery-photo img'));
+
+  const lightbox=
+    document.getElementById('galleryLightbox');
+
+  const lightboxImage=
+    document.getElementById('lightboxImage');
+
+  const counter=
+    document.getElementById('lightboxCounter');
+
+  if(!photos.length || !lightbox || !lightboxImage){
+    return;
+  }
+
+  const closeBtn=
+    lightbox.querySelector('.lightbox-close');
+
+  const prevBtn=
+    lightbox.querySelector('.lightbox-prev');
+
+  const nextBtn=
+    lightbox.querySelector('.lightbox-next');
+
+  let currentIndex=0;
+
+
+  function showPhoto(index){
+
+    if(index < 0){
+      index=photos.length-1;
+    }
+
+    if(index >= photos.length){
+      index=0;
+    }
+
+    currentIndex=index;
+
+    lightboxImage.src=
+      photos[currentIndex].getAttribute('src');
+
+    lightboxImage.alt=
+      photos[currentIndex].alt || 'Фотография отряда';
+
+    if(counter){
+      counter.textContent=
+        `${currentIndex+1} / ${photos.length}`;
+    }
+  }
+
+
+  function openLightbox(index){
+
+    showPhoto(index);
+
+    lightbox.classList.add('open');
+
+    document.body.classList.add('lightbox-open');
+  }
+
+
+  function closeLightbox(){
+
+    lightbox.classList.remove('open');
+
+    document.body.classList.remove('lightbox-open');
+  }
+
+
+  photos.forEach((photo,index)=>{
+
+    photo.addEventListener('click',function(e){
+
+      e.preventDefault();
+
+      e.stopPropagation();
+
+      openLightbox(index);
+
+    });
+
+  });
+
+
+  if(closeBtn){
+
+    closeBtn.addEventListener('click',function(e){
+
+      e.stopPropagation();
+
+      closeLightbox();
+
+    });
+
+  }
+
+
+  if(prevBtn){
+
+    prevBtn.addEventListener('click',function(e){
+
+      e.stopPropagation();
+
+      showPhoto(currentIndex-1);
+
+    });
+
+  }
+
+
+  if(nextBtn){
+
+    nextBtn.addEventListener('click',function(e){
+
+      e.stopPropagation();
+
+      showPhoto(currentIndex+1);
+
+    });
+
+  }
+
+
+  lightbox.addEventListener('click',function(e){
+
+    if(e.target===lightbox){
+      closeLightbox();
+    }
+
+  });
+
+
+  document.addEventListener('keydown',function(e){
+
+    if(!lightbox.classList.contains('open')){
+      return;
+    }
+
+    if(e.key==='Escape'){
+      closeLightbox();
+    }
+
+    if(e.key==='ArrowLeft'){
+      showPhoto(currentIndex-1);
+    }
+
+    if(e.key==='ArrowRight'){
+      showPhoto(currentIndex+1);
+    }
+
+  });
+
+};
+
 })();
