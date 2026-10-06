@@ -301,6 +301,22 @@ if (videoBox) {
       </div>
     `;
   } else {
+    videoBox.closest('.team-video-section').style.display = 'none';
+  }
+}
+    const videoBox = byId('teamVideo');
+
+if (videoBox) {
+  if (t.videoUrl) {
+    videoBox.innerHTML = `
+      <div class="team-video-player">
+        <video controls playsinline preload="metadata">
+          <source src="${t.videoUrl}" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+    `;
+  } else {
     videoBox.style.display = 'none';
   }
 }
