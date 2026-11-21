@@ -81,11 +81,17 @@
     linear-gradient(180deg, #fff, #f7f9fc);
 }
 
-.about-hero-grid{
+.about-hero-grid {
   display: grid;
   grid-template-columns: 1.05fr .75fr;
   gap: 58px;
-  align-items: start;
+  align-items: center;
+}
+
+@media (min-width: 951px) {
+  .about-hero-grid > div:first-child {
+    transform: translateY(-55px);
+  }
 }
 .about-hero h1{
   max-width: 760px;
@@ -1568,10 +1574,11 @@ body.lightbox-open {
 .about-hero-description p {
   display: block;
   margin: 0 0 16px;
-  color: #475467;
+  color: #667085;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   font-size: 17px;
-  line-height: 1.72;
   font-weight: 400;
+  line-height: 1.72;
 }
 
 @media (max-width: 600px) {
