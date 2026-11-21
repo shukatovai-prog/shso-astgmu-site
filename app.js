@@ -334,16 +334,18 @@ window.renderTeams=function(target){
         </div>
       `;
 
-    }else{
+   }else{
 
-      const videoSection=
-        videoBox.closest('.team-video-section');
+  videoBox.innerHTML = `
+    <div class="video-box">
+      <div>
+        <strong>Видео скоро появится</strong>
+        <span>СМО «Дофамин»</span>
+      </div>
+    </div>
+  `;
 
-      if(videoSection){
-        videoSection.style.display='none';
-      }
-
-    }
+}
   }
 
 
