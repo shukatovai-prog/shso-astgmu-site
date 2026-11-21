@@ -1532,3 +1532,25 @@ body.lightbox-open {
     bottom: 27px !important;
   }
 }
+/* Описание штаба на странице «О нас» */
+
+.about-hero-description {
+  max-width: 720px;
+  margin: 0 0 24px;
+}
+
+.about-hero-description p {
+  display: block;
+  margin: 0 0 16px;
+  color: #475467;
+  font-size: 17px;
+  line-height: 1.72;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .about-hero-description p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
