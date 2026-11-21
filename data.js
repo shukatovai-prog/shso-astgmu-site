@@ -108,7 +108,7 @@ tagline: 'СМО «Дофамин»',
         {name:'Ягодина Анна', role:'Командир отряда', vk:'https://vk.com/nutoooon', photo: "assets/as-k.jpg"},
         {name:'Ванина Арина', role:'Комиссар отряда', vk:'https://vk.com/arinarvni', photo: "assets/as-kom.jpg"},
         {name:'Сайкина Татьяна', role:'Мастер (методист) отряда', vk:'https://vk.com/tanyubatkovna', photo: "assets/as-m.jpg"},
-        {name:'Капралова Милена', role:'Руководитель прессы отряда', vk:'https://vk.com/maal3na', photo: "assets/as-p.jpg"}
+        {name:'Клокова Ярослава', role:'Руководитель прессы отряда', vk:'https://vk.com/yarrsss', photo: "assets/as-p.jpg"}
       ]
     },
     {
