@@ -61,8 +61,9 @@ window.SITE_DATA = {
     },
     {
       slug: 'dofamin',
-      name: 'Дофамин',
-      tagline: 'СМО «Дофамин»',
+name: 'Дофамин',
+videoUrl: 'https://storage.yandexcloud.net/shso-astgmu-video/dofamin.mp4',
+tagline: 'СМО «Дофамин»',
       founded: '2024 — первая целина',
       description: 'В 2024 году мы впервые отправились в Республику Татарстан, где отработали трудовой семестр в медицинских учреждениях. С тех пор целина для нас — бесценный опыт.',
       accent: '#7f56d9',
