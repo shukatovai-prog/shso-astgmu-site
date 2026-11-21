@@ -72,9 +72,28 @@
 /* =========================================================
    ABOUT PAGE V2
    ========================================================= */
-.about-hero{padding:76px 0 78px;overflow:hidden;background:radial-gradient(circle at 82% 18%,rgba(217,45,32,.12),transparent 25rem),radial-gradient(circle at 10% 0,rgba(21,94,239,.15),transparent 30rem),linear-gradient(180deg,#fff,#f7f9fc)}
-.about-hero-grid{display:grid;grid-template-columns:1.05fr .75fr;gap:58px;align-items:center}
-.about-hero h1{max-width:760px;margin:18px 0 18px;font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-.055em}
+.about-hero{
+  padding: 52px 0 78px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(217,45,32,.12), transparent 25rem),
+    radial-gradient(circle at 10% 0, rgba(21,94,239,.15), transparent 30rem),
+    linear-gradient(180deg, #fff, #f7f9fc);
+}
+
+.about-hero-grid{
+  display: grid;
+  grid-template-columns: 1.05fr .75fr;
+  gap: 58px;
+  align-items: start;
+}
+.about-hero h1{
+  max-width: 760px;
+  margin: 12px 0 16px;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -.055em;
+}
 .about-hero-description p {
   display: block;
   max-width: 720px;
