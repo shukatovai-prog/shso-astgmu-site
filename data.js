@@ -77,7 +77,7 @@ tagline: 'СМО «Дофамин»',
        social: [
   {
     label: 'ВКонтакте',
-    url: 'https://vk.ru/smo_dopamine'
+    url: 'https://vk.ru/rso_astrakhan_smodopamine'
   },
 ],
       command: [
